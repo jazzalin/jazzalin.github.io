@@ -19,48 +19,96 @@
         <figure>
           <img src="img/profile.jpg" style="display:block; margin: 0 auto"  alt="goof1" />
         </figure>
-        <p class="view"><a href="https://github.com/ljazzal">Check out my GitHub Profile</a></p>
+        <p class="view" style="text-align: center;"><a href="https://github.com/ljazzal">Check out my GitHub Profile</a></p>
 
       </header>
       <section>
 
 
-<!-- <h3>
-<a id="navierstokes" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2D Navier-Stokes solver (January 2017 - Present)</h3>
+<h3>
+  <a id="smartsnipe" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hockey Action Recognition via Pose CNN (Capstone Project)
+</h3>
 
-	<p>To familiarize myself with the techniques used in simulations of fluid flow, I followed an <a href="http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes/">introductory course in CFD</a> (computational fluid dynamics). By the end of the module, I was able to implement a <b>2D Navier-Stokes finite-difference solver</b> from scratch (using Numpy). By creating short 2D and 3D animations with <b>Matplotlib</b>, I gained an appreciation of common fluid flow phenomenona (e.g. contour/quiver plot animation of cavity flow), as well as the numerical schemes behind Navier-Stokes solvers.
+	<p>My mechatronics Captsone project consists in a "smart shooting board" that can be attached to any hockey net to enhance the shooting practice experience. By leveraging actuators mounted on the board, the slots are remotely controlled to simulate goal scoring opportunities, while a player-facing camera, a speed gun and various detection sensors are fused to produce performance indicators. Action recognition via CNN-based pose estimation is being researched to infer when the shot has been taken. The results shown below have been obtained with a modified OpenPose library running on an NVIDIA Jetson TX1 with a Kinectv1 camera.</p>
+  <figure>
+  <div class="row">
+    <div class="column">
+      <img src="img/smartsnipe.png" alt="smart shooting board" style="display:block; margin: 0 auto" height="250" width="250">
+    </div>
+    <div class="column">
+      <img src="img/demo_wo_stick.gif" alt="not a hockey player" style="display:block; margin: 0 auto" height="250" width="200">
+    </div>
+  </div> 
+  <!-- <img src="img/demo_wo_stick.gif" style="display:block; margin: 0 auto"  alt="not a hockey player" height="427" width="554" /> -->
+  <figcaption style="text-align:center;">Prototype and preliminary human pose estimation without stick recognition</figcaption>
+</figure>
+
+<h3>
+  <a id="cpp" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GPS-based offline coverage path planning (Fall 2019)
+</h3>
+
+  <p>Following the integration of a new GPS sensor with the point-to-point navigation stack during my internship at Clearpath Robotics, I started experimenting with coverage path planning methods for mobile robots. Based on the popular <a href="https://pdfs.semanticscholar.org/8df2/e8ed0410c3ae5b0f56c4367b740e91c23d73.pdf">Boustrophedon cell decomposition method</a>, I implemented an offline coverage "path planning" algorithm to parse arbitrary polygons into a sequence of GPS waypoints which could then be passed to the mobile platform's navigation stack. The user need only select boundary points in a GUI with GPS images of the location to delineate the region of interest and the extented stack would compute the appropriate path segments, accounting for obstacles and non-convex angles.</p>
+
+  <figure>
+  <img src="img/gps_coverage.png" style="display:block; margin: 0 auto"  alt="gps coverage field" height="224" width="480" />
+  <figcaption style="text-align:center;">Offline coverage path planning using GPS images and waypoints</figcaption>
+</figure>
+
+<h3>
+  <a id="rotdp" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>URA in nonlinear control (Fall 2019)
+</h3>
+
+  <p>
+
+    As a part-time undergraduate research assistant in nonlinear control, I setup and tested a rotary inverted double pendulum to support the investigation of nonlinear controller design based on the theory of virtual holonomic constraints. While time did not permit the implemetation of such constraints in the controller design, this project provided a good application of state space design and hands-on  introduction to LQR.</p>
+
+<figure>
+  <img src="img/rotdp.gif" style="display:block; margin: 0 auto"  alt="rotdp" height="325" width="160" />
+  <figcaption style="text-align:center;">Rotary double inverted pendulum with disturbance</figcaption>
+</figure>
+
+
+<h3>
+  <a id="moose" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ROS open-source contributions (Summer 2019)
+</h3>
+
+  <p>During my internship at Clearpath Robotics, I was fortunate to be able to contribute to open-source software, mainly through the ROS ecosystem. From drivers for sensors commonly found on mobile robots to Gazebo simulations for Clearpath platforms, this experience was a great way to be involved in the development of robotics research. I developed the first iteration of the <a href="https://clearpathrobotics.com/moose-ugv/">Clearpath Moose</a> Gazebo simulation, now available for ROS Kinetic!</p>
+  <figure>
+  <img src="img/moose_sim.png" style="display:block; margin: 0 auto"  alt="a moose" height="283" width="484" />
+  <figcaption style="text-align:center;">Gazebo simulation for Clearpath Moose UGV (ROS Kinetic)</figcaption>
+</figure>
+
+<h3>
+  <a id="hackday" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Clearpath hackday: turfbot (Summer 2019)
+</h3>
+
+  <p>During the 2019 Clearpath Summer hackday challenge, our team of three decided to build yet another line marking robot for turf. However, instead of converting the office backyard into a soccer pitch, we thought we could pull-off a publicity stunt by printing the company logo, large enough to be captured by a drone's camera flying overhead. Well, we didn't quite get to that stage.. but we got pretty close! The logo was parsed as a polygon whose vertices were then converted into local GPS coordinates to allow for waypoint navigation.</p>
+  <figure>
+    <div class="row">
+      <div class="column">
+        <img src="img/hackbot.jpg" alt="hackbot" style="display:block; margin: 0 auto" height="221" width="295">
+      </div>
+      <div class="column">
+        <img src="img/hackday.png" alt="logo" style="display:block; margin: 0 auto" height="221" width="321">
+      </div>
+    </div> 
+  <figcaption style="text-align:center;">Hackday robot used to draw the Clearpath logo on the turf</figcaption>
+</figure>
+
+<h3>
+  <a id="moose" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RL 101 project: Tic-tac-toe player (Summer 2018)
+</h3>
+
+<h3>
+<a id="navierstokes" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>URA in computational fluid dynamics (2017)</h3>
+
+<p>As a part-time undergraduate research assistant in CFD, I gained valuable experience with common CFD tools by simulating shock wave interactions between bodies travelling at hypersonic speeds.</p>
 
 </p>
 <figure>
-  <img src="cavity_flow.png" style="display:block; margin: 0 auto"  alt="alt text" height="350" width="600" />
-  <figcaption style="text-align:center;">Cavity flow animation</figcaption>
-</figure> -->
-
-
-<!-- <h3>
-<a id="navierstokes" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shockwave interactions - research assistantship in CFD (May 2017 - Present)</h3>
-
-<p>
-  In order to further explore applications in computational physics (and consolidate existing knowledge), I took on a position as a research assistant in computational fluid dynamics (CFD). In particular, the understanding of the Navier-Stokes equations (the Euler equations in the case of inviscid flow) is fundamental to the study of shock wave formation in high speed flows. In this project, I used CFD tools to explore shock wave interactions.
-</p>
-
-</p>
-<figure>
-  <img src="sample.png" style="display:block; margin: 0 auto"  alt="alt text" />
+  <img src="img/ura1.png" style="display:block; margin: 0 auto"  alt="alt text" />
   <figcaption style="text-align:center;">Snapshot from shock wave simulation</figcaption>
-</figure> -->
-
-
-<!-- <h3>
-<a id="chaos" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chaos theory and the double pendulum (2014 - Present)</h3>
-
-<p>Ever since reading about this mathematical theory in James Gleick's <i>Chaos: Making a New Science</i>, I've been intrigued by the manifestation of <b>'chaos'</b> in dynamical systems (remember when Jeff Goldblum played Dr. Ian Malcolm, the chaos theorist, in Jurassic Park? Same idea). A system which is well known to showcase chaotic behaviour is the <b>double pendulum</b>. Comparing the determinism of the simple pendulum with the strong sensitivity to initial conditions of the double pendulum is fascinating. A numerical simulation of the double pendulum has been implemented in <b>Python</b> (using Plotly animation). The system of differential equations governing the motion of the double pendulum has been solved with a <b>4th order Runge-Kutta method</b>. A double pendulum made out of plexiglass is currently in the works (in the laser-cutting phase). 
-
-</p>
-<figure>
-	<img src="dp_still.png" style="display:block; margin: 0 auto" alt="alt text" width="500" height="350" />
-	<figcaption style="text-align:center;">Snapshot of the double pendulum undergoing chaotic motion</figcaption>
-</figure> -->
+</figure>
 
 <!--
 
