@@ -1,115 +1,88 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
+---
+---
 
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@arxiv{Azzalini2022,
+	title = {Simulating Short-Term Synaptic Plasticity on SpiNNaker Neuromorphic Hardware},
+	url = {https://www.biorxiv.org/content/early/2022/09/15/2022.09.13.507796},
+	doi = {10.1101/2022.09.13.507796},
+	preview = {bioarxiv2022.png},
+	abstract = {Neuromorphic chips are well-suited for the exploration of neuronal dynamics in (near) real-time. In order to port existing research onto these chips, relevant models of neuronal and synaptic dynamics first need to be supported by their respective development environments and validated against existing simulator backends. At the time of writing, support for short-term synaptic plasticity on neuromorphic hardware is scarce. This technical paper proposes an implementation of dynamic synapses for the SpiNNaker development environment based on the popular synaptic plasticity model by Tsodyks and Markram (TM). This extension is undertaken in the context of existing research on neuromodulation and the study of deep brain stimulation (DBS) effects on singular-neuron responses. The implementation of the TM synapse is first detailed and then, simulated for various response types. Its role in studies of DBS effect on postsynaptic responses is also reviewed. Finally, given the real-time capabilities offered by the hardware, we provide some insight to lay the groundwork for future explorations of closed-loop DBS on neuromorphic chips.},
+	journal = {bioRxiv},
+	author = {Azzalini, Loïc J. and Lankarany, Milad},
+	year = {2022},
+	note = {bioRxiv preprint},
+    pdf = {https://www.biorxiv.org/content/early/2022/09/15/2022.09.13.507796.full.pdf},
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@inproceedings{Azzalini2023_2,
+  author       = {Azzalini, Loïc J. and Izzo, Dario},
+  title        = {Tracking Particles Ejected From Active Asteroid Bennu With Event-Based Vision},
+  code         = {https://github.com/jazzalin/escape-bennu},
+  slides       = {aidaa_2023_azzalini_static.pdf},
+  preview      = {aidaa2023.png},
+  abstract     = {Early detection and tracking of ejecta in the vicinity of small solar system bodies is crucial to guarantee spacecraft safety and support scientific observation. During the visit of active asteroid Bennu, the OSIRIS-REx spacecraft relied on the analysis of images captured by onboard navigation cameras to detect particle ejection events, which ultimately became one of the mission's scientific highlights. To increase the scientific return of similar time-constrained missions, this work proposes an event-based solution that is dedicated to the detection and tracking of centimetre-sized particles. Unlike a standard frame-based camera, the pixels of an event-based camera independently trigger events indicating whether the scene brightness has increased or decreased at that time and location in the sensor plane. As a result of the sparse and asynchronous spatiotemporal output, event cameras combine very high dynamic range and temporal resolution with low-power consumption, which could complement existing onboard imaging techniques. This paper motivates the use of a scientific event camera by reconstructing the particle ejection episodes reported by the OSIRIS-REx mission in a photorealistic scene generator and in turn, simulating event-based observations. The resulting streams of spatiotemporal data support future work on event-based multi-object tracking.},
+  date         = {2023},
+  eventdate    = {2023-09-04/2023-09-07},
+  booktitle    = {Proceedings of the XXVII AIDAA International Congress},
+  location     = {Padova},
+  year = {2023},
+  selected = {true},
+  doi = {10.21741/9781644902813-124},
+  url = {https://doi.org/10.21741/9781644902813-124},
+  pdf = {https://doi.org/10.21741/9781644902813-124}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@inproceedings{Azzalini2023_3,
+  author       = {Azzalini, Loïc J. and Blazquez, Emmanuel and Hadjiivanov, Alexander and Meoni, Gabriele and Izzo, Dario},
+  title        = {On the Generation of Synthetic Event-Based Vision Datasets for Navigation and Landing},
+  code         = {https://gitlab.com/EuropeanSpaceAgency/trajectory-to-events},
+  preview      = {esagnc2023.png},
+  slides       = {esa_gnc_2023_azzalini_static.pdf},
+  abstract     = {This paper presents a methodology and a software pipeline for generating event-based vision datasets from optimal landing trajectories. The study is motivated by the potential use case for an onboard event-based navigation camera during the approach of a target body and the lack of real-world datasets to support it due to the fact that event-based cameras are relatively new technology. We construct sequences of photorealistic images of the lunar surface with the Planet and Asteroid Natural Scene Generator (PANGU) at various points along optimal descent trajectories with varying boundary conditions. The generated image sequences are then converted into event streams by means of an event-based camera emulator. We demonstrate that the pipeline can generate realistic event-based representations of surface features by constructing a dataset of 500 trajectories, complete with event streams and motion field groundtruth data. We anticipate that novel event-based vision datasets can be generated using this pipeline to support various spacecraft pose reconstruction problems given events as input, and we hope that the proposed methodology would attract the attention of researchers working at the intersection of neuromorphic vision and guidance navigation and control.},
+  date         = {2023},
+  eventdate    = {2023-06-12/2023-06-16},
+  booktitle    = {Proceedings of the 12th International Conference on Guidance, Navigation & Control Systems (GNC)},
+  location     = {Sopot},
+  year = {2023},
+  selected = {true},
+  doi = {10.5270/esa-gnc-icatt-2023-202},
+  url = {https://doi.org/10.5270/esa-gnc-icatt-2023-202},
+  pdf = {https://doi.org/10.5270/esa-gnc-icatt-2023-202}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+@article{Azzalini2023,
+	title = {Adaptive Unscented Kalman Filter for Neuronal State and Parameter Estimation},
+	issn = {1573-6873},
+	pdf = {https://doi.org/10.1007/s10827-023-00845-z},
+	doi = {10.1007/s10827-023-00845-z},
+	code = {https://github.com/nsbspl/RAUKF},
+	preview = {jcn2023.png},
+	abstract = {Data assimilation techniques for state and parameter estimation are frequently applied in the context of computational neuroscience. In this work, we show how an adaptive variant of the unscented Kalman filter (UKF) performs on the tracking of a conductance-based neuron model. Unlike standard recursive filter implementations, the robust adaptive unscented Kalman filter (RAUKF) jointly estimates the states and parameters of the neuronal model while adjusting noise covariance matrices online based on innovation and residual information. We benchmark the adaptive filter's performance against existing nonlinear Kalman filters and explore the sensitivity of the filter parameters to the system being modelled. To evaluate the robustness of the proposed solution, we simulate practical settings that challenge tracking performance, such as a model mismatch and measurement faults. Compared to standard variants of the Kalman filter the adaptive variant implemented here is more accurate and robust to faults.},
+	journal = {Journal of Computational Neuroscience},
+	author = {Azzalini, Loïc J. and Crompton, David and D'Eleuterio, Gabriele M. T. and Skinner, Frances and Lankarany, Milad},
+	month = mar,
+	year = {2023},
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@InProceedings{Azzalini2024,
+author="Azzalini, Lo{\"i}c
+and Gl{\"u}ge, Stefan
+and Struckmeier, Jens
+and Sandamirskaya, Yulia",
+editor="Wand, Michael
+and Malinovsk{\'a}, Krist{\'i}na
+and Schmidhuber, J{\"u}rgen
+and Tetko, Igor V.",
+title="Event-Based Hand Detection on Neuromorphic Hardware Using a Sigma Delta Neural Network",
+booktitle="Artificial Neural Networks and Machine Learning -- ICANN 2024",
+year="2024",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="353--364",
+preview="icann2024.png",
+abstract="The development of deep learning (DL) models has dramatically improved marker-free human pose estimation, including an important task of hand tracking. However, for applications in real-time critical and embedded systems, e.g. in robotics or augmented reality, hand tracking based on standard frame-based cameras is too slow and/or power hungry. The latency is limited by the frame rate of the image sensor already, and any subsequent DL processing further increases the latency gap, while requiring substantial power for processing. Dynamic vision sensors, on the other hand, enable sub-millisecond time resolution and output sparse signals that can be processed with an efficient Sigma Delta Neural Network (SDNN) model that preserves the sparsity advantage in the neural network. This paper presents the training and evaluation of a small SDNN for hand detection, based on event data from the DHP19 dataset deployed on Intel's Loihi 2 neuromorphic development board. We found it possible to deploy a hand detection model in neuromorphic hardware backend without a notable performance difference to the original GPU implementation, at an estimated mean dynamic power consumption for the network running on the chip of ≈7mW.",
+isbn="978-3-031-72359-9"
 }
