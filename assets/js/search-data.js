@@ -30,4 +30,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },];
+        },{id: "projects-eventful-landings",
+          title: 'Eventful landings',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/eventful_landings/";
+            },},{id: "projects-escape-from-bennu",
+          title: 'ESCAPE from Bennu',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/multi_particle_tracking/";
+            },},];
