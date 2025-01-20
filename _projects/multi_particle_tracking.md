@@ -14,9 +14,7 @@ An *active* asteroid shows evidence of mass loss caused by natural processes, su
 
 Dynamic vision sensing has been shown to be an effective low-power solution to capture data from environments with high dynamic range [4]. These biologically-inspired sensors, commonly known as event-cameras, benefit from independent pixels that asynchronously respond to brightness changes in the scene, departing from the standard frame-based representation of visual intensities. Feature detection and tracking is one area where these novel sensors shine as the absence of frames allows for continuous and asynchronous tracking of multiple objects [5]. The advantages of event-based cameras over standard frame cameras, especially in terms of overall power consumption and dynamic range, has motivated a number of recent studies on their suitability for space applications [6], notably in the area of space situational awareness [7].
 
-<br>
-<h2>Project goals</h2>
-<br>
+## Project goals
 
 This project aims to further evaluate dynamic vision sensing for future space applications. By reviewing data collected in past missions, we can identify dynamic scenes where an event-based sensor could, in theory, augment visual data capture and contribute to the mission's scientific objectives. We select the particle ejection episodes observed around active asteroid Bennu to present a use case for event-based multi-object tracking in orbit of a target of scientific interest.
 
@@ -31,9 +29,7 @@ This project aims to further evaluate dynamic vision sensing for future space ap
 
 The first step consists in simulating an event-based representation of an active asteroid from the point of view of a realistic trajectory under lighting conditions that capture the high dynamic range of the deep space environment. Fig. 1 reconstructs from the openly-available SPICE kernels [8] an episode where multiple particles were observed near the surface of Bennu. Particular attention is given to the representation of the centimetre-size particles temporarily orbiting the asteroid, as reported by the OSIRIS-REx mission. The second phase of the project focuses on the development of event-based particle detection and tracking algorithms.
 
-<br>
-<h2>Simulation</h2>
-<br>
+## Simulation
 
 The particle ejection episodes illustrated in Fig. 1 can be rendered more realistically with computer graphics tools such as Blender. Blender has been used in the past to create textured SSBs, including asteroids resembling the rubble-pile surface of asteroid Bennu [9], to which it is straightforward to add renders of centimetre-size particles. The simulated pinhole camera in Blender is then controlled according to the sampled trajectories depicted in Fig. 1 to generate sequences of frames capturing the active asteroid under realistic lighting conditions. To simulate dynamic vision sensing, the frames are passed through a video-to-event simulator [10], where the sensitivity and the noise of the emulated sensor can be calibrated. Following adequate parameterization of the camera model, particle ejection scenes such as the one depicted on the left in Fig. 2 are reconstructed, from which synthetic event-based representations are then derived (center and right). Given the asynchronous nature of dynamic vision sensing, the illustrations represent accumulations of positive (blue) and negative (red) changes in light brightness into event-frames to allow for a comparison with standard light intensity images.
 
@@ -48,10 +44,7 @@ The particle ejection episodes illustrated in Fig. 1 can be rendered more realis
 
 The noisy representation of particle ejection episodes (centre image above) will subsequently be used to evaluate event-based multi-object detection and tracking algorithms.
 
-
-<br>
-<h2>References</h2>
-<br>
+## References
 
 [1] Lauretta, D. S. et al. (2019). Episodes of particle ejection from the surface of the active asteroid (101955) Bennu. Science, 366 (6470), eaay3544. https://doi.org/10.1126/science.aay3544 
 
