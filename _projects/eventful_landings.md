@@ -18,7 +18,7 @@ These properties have led neighbouring disciplines to revisit more primitive vis
 
 This project aims to demonstrate how event-based vision could complement existing optical navigation systems in future mission concepts. An event-based dataset is envisioned to support several investigations into future onboard opportunities in the area of terrain relative navigation. First, a dataset of synthetic event streams corresponding to simulated landings on the Moon and Mars is generated (Fig. 1, right). The project's second component focuses on motion estimation as an example application. The inverse problem consists in first estimating the motion field induced by the simulated descent (Fig.1, left) by means of optical flow reconstruction from events. Then, the motion of the spacecraft can be recovered from the estimated flow.
 
-|![Eventful landing animation](/assets/img/eventful/eventful_landing.gif 'Eventful landing animation'){ style="display:block;float:none;margin-left:auto;margin-right:auto;width:60%" }|
+|![Eventful landing animation](/assets/img/eventful/eventful_landing.gif 'Eventful landing animation')|
 |:-:|
 |*Fig. 1: Motion field induced by a simulated descent on a Moon-like surface and the corresponding event-based representation*|
 
@@ -26,7 +26,7 @@ This project aims to demonstrate how event-based vision could complement existin
 
 Trajectory specifications are input into a data pipeline which generates events corresponding to the motion of features in the scene. The pipeline builds upon previous work on event-based vision for ventral landings [5] by considering non-ventral descents to the surface of the Moon and Mars. The landing simulations are obtained by manipulating the viewpoint of a pinhole camera in the Planet and Asteroid Natural Scene Generator (PANGU) [6] and feeding the synthetic scenes to a video-to-event converter [7]. The resulting dataset captures dynamic, event-based representations of common surface features such as craters, boulders and the target body's horizon.
 
-|![Trajectory-to-event dataset pipeline](/assets/img/eventful/pipeline.png 'Trajectory-to-event dataset pipeline'){ style="display:block;float:none;margin-left:auto;margin-right:auto;width:60%" }|
+|![Trajectory-to-event dataset pipeline](/assets/img/eventful/pipeline.png 'Trajectory-to-event dataset pipeline')|
 |:-:|
 |*Fig. 2: Event-based dataset pipeline with inverse problems: (1) optical flow reconstruction and (2) partial state estimation*|
 

@@ -18,14 +18,9 @@ Dynamic vision sensing has been shown to be an effective low-power solution to c
 
 This project aims to further evaluate dynamic vision sensing for future space applications. By reviewing data collected in past missions, we can identify dynamic scenes where an event-based sensor could, in theory, augment visual data capture and contribute to the mission's scientific objectives. We select the particle ejection episodes observed around active asteroid Bennu to present a use case for event-based multi-object tracking in orbit of a target of scientific interest.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <Image class="img-fluid rounded z-depth-1" src="{{ '/assets/img/bennu/orx_particles_orb_C.png' | relative_url }}" align="center" alt="" title="Visualization of OSIRIS-REx trajectory"/>
-    </div>
-</div>
-<div class="caption">
-    Fig. 1: Bennu-fixed particle ejection visualization based on the interpolation of SPICE kernels from 2019-09-13T21:00:00 to 2019-09-14T00:00:00
-</div>
+|![Visualization of OSIRIS-REx trajectory](/assets/img/bennu/orx_particles_orb_C.png 'Visualization of OSIRIS-REx trajectory')|
+|:-:|
+|*Fig. 1: Bennu-fixed particle ejection visualization based on the interpolation of SPICE kernels from 2019-09-13T21:00:00 to 2019-09-14T00:00:00*|
 
 The first step consists in simulating an event-based representation of an active asteroid from the point of view of a realistic trajectory under lighting conditions that capture the high dynamic range of the deep space environment. Fig. 1 reconstructs from the openly-available SPICE kernels [8] an episode where multiple particles were observed near the surface of Bennu. Particular attention is given to the representation of the centimetre-size particles temporarily orbiting the asteroid, as reported by the OSIRIS-REx mission. The second phase of the project focuses on the development of event-based particle detection and tracking algorithms.
 
@@ -33,14 +28,10 @@ The first step consists in simulating an event-based representation of an active
 
 The particle ejection episodes illustrated in Fig. 1 can be rendered more realistically with computer graphics tools such as Blender. Blender has been used in the past to create textured SSBs, including asteroids resembling the rubble-pile surface of asteroid Bennu [9], to which it is straightforward to add renders of centimetre-size particles. The simulated pinhole camera in Blender is then controlled according to the sampled trajectories depicted in Fig. 1 to generate sequences of frames capturing the active asteroid under realistic lighting conditions. To simulate dynamic vision sensing, the frames are passed through a video-to-event simulator [10], where the sensitivity and the noise of the emulated sensor can be calibrated. Following adequate parameterization of the camera model, particle ejection scenes such as the one depicted on the left in Fig. 2 are reconstructed, from which synthetic event-based representations are then derived (center and right). Given the asynchronous nature of dynamic vision sensing, the illustrations represent accumulations of positive (blue) and negative (red) changes in light brightness into event-frames to allow for a comparison with standard light intensity images.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <Image class="img-fluid rounded z-depth-1" src="{{ '/assets/img/bennu/ejecta_render_3x.png' | relative_url }}" align="center" alt="" title="Reconstruction of particle ejection episode"/>
-    </div>
-</div>
-<div class="caption">
-    Fig. 2: Reconstruction of a particle ejection episode: (a) the particles are difficult to detect in the photorealistic render, (b) yet accumulation of synthetic events in a single frame make the particles more easily identifiable against the dynamic background noise (b) and clearly visible in the absence of noise (c) (the arrows indicate the ejecta direction)
-</div>
+
+|![Reconstruction of particle ejection episode](/assets/img/bennu/ejecta_render_3x.png 'Reconstruction of particle ejection episode')|
+|:-:|
+|*Fig. 2: Reconstruction of a particle ejection episode: (a) the particles are difficult to detect in the photorealistic render, (b) yet accumulation of synthetic events in a single frame make the particles more easily identifiable against the dynamic background noise (b) and clearly visible in the absence of noise (c) (the arrows indicate the ejecta direction)*|
 
 The noisy representation of particle ejection episodes (centre image above) will subsequently be used to evaluate event-based multi-object detection and tracking algorithms.
 

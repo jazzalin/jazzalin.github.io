@@ -49,6 +49,11 @@ table.table a {
   }
 }
 
+table {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
 .table-dark {
   background-color: transparent;
   &.table-bordered {
