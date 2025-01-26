@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "projects-eventful-landings",
+        },{id: "post-org-to-markdown-handling-images",
+      
+        title: "org to markdown: handling images",
+      
+      description: "small hack to center and caption images when exporting to Markdown",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/org-md-link/";
+        
+      },
+    },{id: "projects-eventful-landings",
           title: 'Eventful landings',
           description: "",
           section: "Projects",handler: () => {
